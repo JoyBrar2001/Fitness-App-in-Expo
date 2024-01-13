@@ -15,7 +15,6 @@ export default function Exercises() {
   const [exercise, setExercises] = useState([])
 
   const item = useLocalSearchParams()
-  console.log('Got item : ', item)
 
   useEffect(() => {
     if(item) getExercises(item.name)
@@ -29,7 +28,6 @@ export default function Exercises() {
 
   return (
     <ScrollView>
-      <StatusBar style='light' />
       <Image 
         source={item.image}
         style={{ width: wp(100), height: hp(45) }}
@@ -52,6 +50,7 @@ export default function Exercises() {
           <ExerciseList data={exercise} />
         </View>
       </View>
+<StatusBar style='dark' />
     </ScrollView>
   )
 }

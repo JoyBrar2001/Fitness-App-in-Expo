@@ -10,7 +10,6 @@ import BodyParts from '../components/BodyParts'
 export default function home() {
   return (
     <SafeAreaView className="flex-1 bg-whtie flex space-y-5" edges={['top']}>
-      <StatusBar style='auto' />
       <View className="flex-row justify-between items-center mx-5">
         <View className="space-y-2">
           <Text
@@ -23,7 +22,7 @@ export default function home() {
             style={{ fontSize: hp(4.5) }}
             className="font-bold tracking-wider text-rose-500 uppercase"
           >
-            Workout
+            Workout ?
           </Text>
         </View>
 
@@ -33,7 +32,7 @@ export default function home() {
             style={{ height: hp(6), width: hp(6) }}
             className="rounded-full"
           />
-          <View 
+          <View
             className="bg-neutral-200 rounded-full flex justify-center items-center border-[3px] border-neutral-300"
             style={{ height: hp(5.5), width: hp(5.5) }}
           >
@@ -49,6 +48,7 @@ export default function home() {
       <View className="flex-1">
         <BodyParts />
       </View>
+      <StatusBar style='dark' />
     </SafeAreaView>
   )
 }
